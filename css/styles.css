@@ -216,6 +216,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   color: var(--btn-text-color);
   background-color: var(--accent-color);
   font-weight: 700;
@@ -595,10 +596,10 @@ footer {
   margin: 10px 10px 10px 28px;
 }
 
-/* .btn-email-send:hover,
-.btn-email-send:focus {
+.form-email__btn:hover,
+.form-email__btn:focus {
   background-color: var(--bg-hover-button);
-} */
+}
 /* section Portfolio */
 .filter-list {
   display: flex;
@@ -608,10 +609,10 @@ footer {
   align-items: center;
   justify-content: center;
 }
-.filter-list .filter-item + .filter-item {
+.filter-list__item + .filter-list__item {
   margin-left: 8px;
 }
-.filter-item .btn {
+.filter-list__btn {
   padding: 8px 22px;
   color: var(--text-color-h);
   background-color: var(--bg-section-team);
@@ -629,10 +630,10 @@ footer {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filter-item .btn:hover,
-.filter-item .btn:focus,
-.filter-item .btn:active,
-.filter-item .current-btn {
+.filter-list__item .btn:hover,
+.filter-list__item .btn:focus,
+.filter-list__item .btn:active,
+.filter-list__item .current-btn {
   color: var(--btn-text-color);
   background: var(--accent-color);
   /* shadow-middle */
@@ -640,47 +641,47 @@ footer {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-list {
+.grid {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
 }
-.portfolio-card {
+.grid__item {
   min-width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
   background-color: var(--bg-color-card);
 }
 
-.portfolio-card:nth-child(3n) {
+.grid__item:nth-child(3n) {
   margin-right: 0;
 }
-.portfolio-card:nth-last-child(-n + 3) {
+.grid__item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-.portfolio-card .link {
+.grid__link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-card .link:hover,
-.portfolio-card .link:focus {
+.grid__link:hover,
+.grid__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.card-thumb img {
+.product__img {
   display: block;
   min-width: 100%;
   height: auto;
 }
-.card-thumb {
+.product {
   position: relative;
   overflow: hidden;
 }
-.portfolio-card .link:hover .card-overlay,
-.portfolio-card .link:focus .card-overlay {
+.grid__link:hover .product__overlay,
+.grid__link:focus .product__overlay {
   transform: translatey(0);
 }
-.card-overlay {
+.product__overlay {
   position: absolute;
   display: flex;
   top: 0;
@@ -691,7 +692,7 @@ footer {
   transform: translatey(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.text-overlay {
+.product__textoverlay {
   padding: 63px 24px;
   font-size: 18px;
   line-height: 1.56;
@@ -708,7 +709,7 @@ footer {
   border-top: 0;
   box-sizing: border-box;
 }
-.portfolio-card .title {
+.product__title {
   margin: 0;
   color: var(--text-color-h);
   font-weight: 700;
@@ -717,7 +718,7 @@ footer {
   /* identical to box height, or 200% =36px/18px*/
   letter-spacing: 0.06em;
 }
-.portfolio-card .text {
+.product__text {
   margin-top: 4px;
   margin-bottom: 0;
   color: var(--text-color-p);
@@ -810,7 +811,7 @@ footer {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.modal-title {
+.modal__title {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -836,12 +837,12 @@ footer {
   flex-direction: column;
   cursor: pointer;
 }
-.form-label {
+.input-group__label {
   display: block;
   margin-bottom: 4px;
   resize: none;
 }
-.form-input {
+.input-group__input {
   width: 100%;
   height: 40px;
   cursor: pointer;
@@ -852,22 +853,22 @@ footer {
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input[type='text'],
-.form-input[type='email'],
-.form-input[type='tel'] {
+.input-group__input[type='text'],
+.input-group__input[type='email'],
+.input-group__input[type='tel'] {
   padding: 11px 42px;
 }
 
-.form-input::placeholder {
+.input-group__input::placeholder {
   margin: 11px auto 11px 12px;
   color: var(--text-color-p);
   background-color: transparent;
 }
-.form-field {
+.input-group {
   position: relative;
 }
 
-.form-input-icon {
+.input-group__icon {
   width: 18px;
   height: 18px;
   position: absolute;
@@ -877,7 +878,7 @@ footer {
   fill: var(--text-color-h);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.comment {
+.input-group__comment {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -891,7 +892,7 @@ footer {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.comment::placeholder {
+.input-group__comment::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -899,52 +900,52 @@ footer {
   color: var(--form-color-placeholder);
   background-color: transparent;
 }
-.form-input:active,
-.form-input:hover,
-.form-input:focus,
-.comment:active,
-.comment:focus,
-.comment:hover {
+.input-group__input:active,
+.input-group__input:hover,
+.input-group__input:focus,
+.input-group__comment:active,
+.input-group__comment:focus,
+.input-group__comment:hover {
   background-color: transparent;
   border: 1px solid var(--accent-color);
 }
 
-.form-input:active ~ .form-input-icon,
-.form-input:hover ~ .form-input-icon,
-.form-input:focus ~ .form-input-icon,
-.form-input:not(:placeholder-shown) + .form-input-icon {
+.input-group__input:active ~ .input-group__icon,
+.input-group__input:hover ~ .input-group__icon,
+.input-group__input:focus ~ .input-group__icon,
+.input-group__input:not(:placeholder-shown) + .input-group__icon {
   fill: var(--accent-color);
 }
 /* :placeholder-shown (показывается)
 Вводите текст в поля формы 
 и цвет рамки поля изменится
  на синий как только пропадёт плейсхолдер. */
-.form-input:placeholder-shown {
+.input-group_input:placeholder-shown {
   border: 1px solid rgba(33, 33, 33, 0.2);
   background-color: var(--bg-color-main);
 }
 /* :not(:placeholder-shown) ( пропадает)*/
-.form-input:not(:placeholder-shown),
-.comment:not(:placeholder-shown) {
+.input-group__input:not(:placeholder-shown),
+.input-group__comment:not(:placeholder-shown) {
   border: 1px solid var(--accent-color);
   background-color: transparent;
 }
-.form-field:focus-within > .form-input-icon {
+.input-group:focus-within > .input-group__icon {
   fill: var(--accent-color);
 }
-.form-field:focus-within > .form-input {
+.input-group:focus-within > .input-group__input {
   border: 1px solid var(--accent-color);
   background-color: transparent;
 }
 
-.choice {
+.checkbox__body {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
   letter-spacing: 0.03em;
 }
-.choice-label {
+.checkbox__label {
   position: relative;
   margin: 0;
   padding: 0;
@@ -959,7 +960,7 @@ footer {
 
   letter-spacing: 0.03em;
 }
-.checkbox {
+.checkbox__input {
   width: 16px;
   height: 15px;
 
@@ -974,7 +975,7 @@ footer {
   outline: none;
 }
 
-.checkbox-icon {
+.checkbox__icon {
   position: absolute;
   top: 57%;
   left: 0px;
@@ -985,39 +986,42 @@ footer {
 
   transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox:checked {
+.checkbox__input:checked {
   border: none;
 }
-.checkbox:checked + .checkbox-icon {
+.checkbox__input:checked + .checkbox__icon {
   visibility: visible;
   opacity: 1;
   transform: translateY(-50%);
 }
-.choice a {
+.checkbox__link {
   color: var(--accent-color);
 }
+
 .btn-submit {
   width: 200px;
   height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /*
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.88; */
   /* identical to box height, or 188% */
 
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em;
   color: var(--btn-text-color);
   background: var(--accent-color);
   border: none;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
+  box-sizing: border-box; */
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* border-radius: 4px;
+  cursor: pointer; */
+
+  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .btn-submit:hover,
