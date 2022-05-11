@@ -8,7 +8,7 @@
   --form-color-placeholder: rgba(117, 117, 117, 0.5);
   --bg-color-main: #ffffff; /*background-color section  */
   --bg-color-card: #ffffff;
-  --bg-color-header: #fffooter-form-fff;
+  --bg-color-header: #ffffff;
   --bg-overlay-accent: rgba(33, 150, 243, 0.9);
   --hero-title-color: #ffffff;
   --btn-text-color: #ffffff;
@@ -245,18 +245,17 @@ body {
   padding: 94px 0;
   margin-top: 0;
 }
-.hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.section__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--text-color-h);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17; /* or 117% = 42px/36px*/
+  text-align: center;
+  letter-spacing: 0.03em;
 }
+/* ---------------- feature Section--------------------- */
 .feature-list {
   display: flex;
   flex-wrap: wrap;
@@ -284,7 +283,7 @@ body {
   height: 70px;
 }
 
-.feature__title {
+.feature-list__title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -293,7 +292,7 @@ body {
   text-transform: uppercase;
   color: var(--text-color-h);
 }
-.feature__text {
+.feature-list__text {
   font-weight: 400;
   line-height: 1.71;
   /* or 171% = 24px/14px*/
@@ -303,16 +302,7 @@ body {
 .projects {
   padding-top: 0;
 }
-.section__title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: var(--text-color-h);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17; /* or 117% = 42px/36px*/
-  text-align: center;
-  letter-spacing: 0.03em;
-}
+
 .projects-list {
   display: flex;
   flex-wrap: nowrap;
@@ -327,9 +317,7 @@ body {
   width: 370px;
   height: 294px;
 }
-/* .thumb img {
-  object-fit: cover;
-} */
+
 .card__label {
   position: absolute;
   bottom: 0;
@@ -427,10 +415,10 @@ body {
 } */
 
 /* -----------------Section customer--------------------- */
-.customer .container {
+/* .customer .container {
   padding: 94px 0;
-}
-.customer-title {
+} */
+/* .customer-title {
   margin-bottom: 50px;
   color: var(--text-color-h);
   font-weight: 700;
@@ -438,7 +426,7 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-}
+} */
 .customer-list {
   display: flex;
   flex-wrap: nowrap;
@@ -741,12 +729,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 500ms linear, visibility 500ms linear;
 }
-.is-hidden {
-  /* патерн приховування єлементів */
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none; /* не регистрирует на элементе событие*/
-}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -920,7 +903,7 @@ footer {
 Вводите текст в поля формы 
 и цвет рамки поля изменится
  на синий как только пропадёт плейсхолдер. */
-.input-group_input:placeholder-shown {
+.input-group__input:placeholder-shown {
   border: 1px solid rgba(33, 33, 33, 0.2);
   background-color: var(--bg-color-main);
 }
